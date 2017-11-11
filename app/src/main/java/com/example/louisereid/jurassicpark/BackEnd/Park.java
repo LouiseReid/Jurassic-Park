@@ -1,7 +1,4 @@
-package com.example.louisereid.jurassicpark;
-
-import com.example.louisereid.jurassicpark.Paddocks.Paddock;
-import com.example.louisereid.jurassicpark.Paddocks.PaddockState;
+package com.example.louisereid.jurassicpark.BackEnd;
 
 import java.util.ArrayList;
 
@@ -12,6 +9,7 @@ import java.util.ArrayList;
 public class Park {
 
 
+    private ArrayList<Visitor> visitors;
     private ArrayList<Paddock> paddocks;
     private int entryfee;
     private int bank;
@@ -20,10 +18,15 @@ public class Park {
         this.entryfee = entryfee;
         this.bank = bank;
         paddocks = new ArrayList<>();
+        visitors = new ArrayList<>();
     }
 
     public ArrayList<Paddock> getPaddocks() {
         return paddocks;
+    }
+
+    public ArrayList<Visitor> getVisitors() {
+        return visitors;
     }
 
     public int getEntryfee() {
@@ -49,4 +52,18 @@ public class Park {
         return false;
     }
 
+    public int takingsIncrease(int entryfee){
+        return this.bank += entryfee;
+    }
+
+    public int visitorsInPark(){
+        return visitors.size();
+    }
+
+    public void addVisitors(Visitor visitor, Paddock paddock) {
+        if (!LockDown(paddock)) {
+            visitors.add(visitor);
+            takingsIncrease(entryfee);
+        }
+    }
 }

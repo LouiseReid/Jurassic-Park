@@ -1,7 +1,10 @@
 package com.example.louisereid.jurassicpark;
 
-import com.example.louisereid.jurassicpark.Paddocks.Paddock;
-import com.example.louisereid.jurassicpark.Paddocks.PaddockState;
+import com.example.louisereid.jurassicpark.BackEnd.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaur;
+import com.example.louisereid.jurassicpark.BackEnd.Park;
+import com.example.louisereid.jurassicpark.BackEnd.Paddock;
+import com.example.louisereid.jurassicpark.BackEnd.PaddockState;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +28,6 @@ public class PaddockTest {
     Dinosaur tRex;
     Dinosaur diplodocus;
     Dinosaur apatosaurus;
-    Park jurassicPark;
 
 
     @Before
@@ -119,13 +121,22 @@ public class PaddockTest {
 
     @Test
     public void canTransfer(){
-        Dinosaur transferredDino = diplodocus;
-        paddock1.addToPaddock(transferredDino);
-        paddock1.removeFromPaddock(transferredDino);
-        paddock3.addToPaddock(transferredDino);
+        paddock1.addToPaddock(diplodocus);
+        paddock1.transferDino(diplodocus, paddock1, paddock3);
         assertEquals(0, paddock1.paddockSize());
         assertEquals(1, paddock3.paddockSize());
+
     }
+
+    @Test
+    public void canRemoveSpecifiedDino(){
+        paddock1.addToPaddock(diplodocus);
+        paddock1.addToPaddock(apatosaurus);
+        paddock1.removeDino(diplodocus);
+        assertEquals(1, paddock1.paddockSize());
+        assertEquals("Dino removed: Larry", paddock1.removeDino(diplodocus));
+    }
+
 
 
 

@@ -1,11 +1,12 @@
 package com.example.louisereid.jurassicpark;
 
-import com.example.louisereid.jurassicpark.Paddocks.Paddock;
-import com.example.louisereid.jurassicpark.Paddocks.PaddockState;
+import com.example.louisereid.jurassicpark.BackEnd.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.Park;
+import com.example.louisereid.jurassicpark.BackEnd.Visitor;
+import com.example.louisereid.jurassicpark.BackEnd.Paddock;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import static org.junit.Assert.assertEquals;
 

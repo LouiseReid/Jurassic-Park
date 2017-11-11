@@ -1,7 +1,4 @@
-package com.example.louisereid.jurassicpark;
-
-import com.example.louisereid.jurassicpark.Paddocks.Paddock;
-import com.example.louisereid.jurassicpark.Paddocks.PaddockState;
+package com.example.louisereid.jurassicpark.BackEnd;
 
 /**
  * Created by louisereid on 10/11/2017.
@@ -9,7 +6,6 @@ import com.example.louisereid.jurassicpark.Paddocks.PaddockState;
 
 public class Visitor {
 
-    Paddock paddock;
 
     private String name;
     private int purse;

@@ -1,13 +1,9 @@
-package com.example.louisereid.jurassicpark.Paddocks;
-
-import com.example.louisereid.jurassicpark.DinoType;
-import com.example.louisereid.jurassicpark.Dinosaur;
+package com.example.louisereid.jurassicpark.BackEnd;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
-
-import static android.R.attr.id;
-import static com.example.louisereid.jurassicpark.DinoType.HERBIVORE;
 
 /**
  * Created by louisereid on 10/11/2017.
@@ -31,6 +27,7 @@ public class Paddock {
         generatePaddockState();
     }
 
+
     public Paddock(ArrayList<PaddockState> paddockState){
         this.paddockState = paddockState;
     }
@@ -40,7 +37,7 @@ public class Paddock {
         return location;
     }
 
-    public int getCapacity() {
+    public Integer getCapacity() {
         return capacity;
     }
 
@@ -114,10 +111,27 @@ public class Paddock {
     }
 
 
+    public void transferDino(Dinosaur dinosaur, Paddock paddock1, Paddock paddock2){
+        paddock1.removeFromPaddock(dinosaur);
+        paddock2.addToPaddock(dinosaur);
+    }
 
+    public String removeDino(Dinosaur dinosaur){
+        Iterator itr = dinosaurs.iterator();
+        while (itr.hasNext()){
+            Dinosaur removed = (Dinosaur)itr.next();
+            if(removed == dinosaur){
+                itr.remove();
+            }
+        }
+        return "Dino removed: " + dinosaur.getName();
+    }
 
 
 
 
 
 }
+
+
+

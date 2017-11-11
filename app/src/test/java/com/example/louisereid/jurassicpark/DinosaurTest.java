@@ -1,7 +1,9 @@
 package com.example.louisereid.jurassicpark;
 
-import com.example.louisereid.jurassicpark.Food.Meat;
-import com.example.louisereid.jurassicpark.Food.Plants;
+import com.example.louisereid.jurassicpark.BackEnd.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaur;
+import com.example.louisereid.jurassicpark.BackEnd.Food.Meat;
+import com.example.louisereid.jurassicpark.BackEnd.Food.Plants;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,6 +18,7 @@ public class DinosaurTest {
 
     Dinosaur tRex;
     Dinosaur diplodocus;
+    Dinosaur apatosaurus;
     Meat steak;
     Plants foliage;
 
@@ -23,8 +26,9 @@ public class DinosaurTest {
     public void before(){
         tRex = new Dinosaur(DinoType.CARNIVORE, "Big T", 250, 8);
         diplodocus = new Dinosaur(DinoType.HERBIVORE, "Larry", 360, 16);
-        steak = new Meat(DinoType.CARNIVORE);
-        foliage = new Plants(DinoType.HERBIVORE);
+        apatosaurus = new Dinosaur(DinoType.HERBIVORE, "Al", 190, 30);
+        steak = new Meat(500, DinoType.CARNIVORE);
+        foliage = new Plants(200, DinoType.HERBIVORE);
     }
 
     @Test
@@ -65,6 +69,8 @@ public class DinosaurTest {
         diplodocus.sleep();
         assertEquals(0, diplodocus.stomachSize());
     }
+
+
 
 
 }

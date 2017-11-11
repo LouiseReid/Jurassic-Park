@@ -1,13 +1,10 @@
-package com.example.louisereid.jurassicpark;
+package com.example.louisereid.jurassicpark.BackEnd;
 
-import com.example.louisereid.jurassicpark.DinoType;
-import com.example.louisereid.jurassicpark.Food.Edible;
-import com.example.louisereid.jurassicpark.Food.Meat;
-import com.example.louisereid.jurassicpark.Food.Plants;
+import com.example.louisereid.jurassicpark.BackEnd.Food.Edible;
+import com.example.louisereid.jurassicpark.BackEnd.Food.Meat;
+import com.example.louisereid.jurassicpark.BackEnd.Food.Plants;
 
 import java.util.ArrayList;
-
-import static android.os.Build.VERSION_CODES.M;
 
 /**
  * Created by louisereid on 10/11/2017.
@@ -24,6 +21,7 @@ public class Dinosaur {
     private int age;
     private int weight;
     private ArrayList<Edible> stomach;
+    private int stomachSize;
 
     public Dinosaur(DinoType type, String name, int age, int weight) {
         this.type = type;
@@ -32,6 +30,8 @@ public class Dinosaur {
         this.weight = weight;
         stomach = new ArrayList<>();
     }
+
+
 
     public DinoType getType() {
         return type;
@@ -44,6 +44,8 @@ public class Dinosaur {
     public int getAge() {
         return age;
     }
+
+
 
     public ArrayList<Edible> getStomach() {
         return stomach;
@@ -75,5 +77,8 @@ public class Dinosaur {
     public void sleep(){
         stomach.clear();
     }
+
+
+
 
 }
