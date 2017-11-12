@@ -1,16 +1,15 @@
 package com.example.louisereid.jurassicpark;
 
 import com.example.louisereid.jurassicpark.BackEnd.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.PaddockName;
 import com.example.louisereid.jurassicpark.BackEnd.Park;
-import com.example.louisereid.jurassicpark.BackEnd.Visitor;
+import com.example.louisereid.jurassicpark.BackEnd.Humans.Visitor;
 import com.example.louisereid.jurassicpark.BackEnd.Paddock;
 import com.example.louisereid.jurassicpark.BackEnd.PaddockState;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -30,11 +29,11 @@ public class ParkTest {
     @Before
     public void before(){
         jurassicPark = new Park(25, 1000);
-        paddock1 = new Paddock("North Corner", 20, DinoType.HERBIVORE);
-        paddock2 = new Paddock("East Wing", 5, DinoType.CARNIVORE);
-        paddock3 = new Paddock("Central Enclosure", 1, DinoType.HERBIVORE);
-        visitor1 = new Visitor("Louise", 50);
-        visitor2 = new Visitor("Dave", 40);
+        paddock1 = new Paddock(PaddockName.BRACHIOSAURUS, 20, DinoType.HERBIVORE);
+        paddock2 = new Paddock(PaddockName.TREX, 5, DinoType.CARNIVORE);
+        paddock3 = new Paddock(PaddockName.TRICERATOPS, 1, DinoType.HERBIVORE);
+        visitor1 = new Visitor("Louise", PaddockName.TRICERATOPS, 50);
+        visitor2 = new Visitor("Dave", PaddockName.AVIARY, 40);
     }
 
     @Test

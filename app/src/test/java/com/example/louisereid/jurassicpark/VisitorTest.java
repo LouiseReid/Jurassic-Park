@@ -1,8 +1,9 @@
 package com.example.louisereid.jurassicpark;
 
 import com.example.louisereid.jurassicpark.BackEnd.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.PaddockName;
 import com.example.louisereid.jurassicpark.BackEnd.Park;
-import com.example.louisereid.jurassicpark.BackEnd.Visitor;
+import com.example.louisereid.jurassicpark.BackEnd.Humans.Visitor;
 import com.example.louisereid.jurassicpark.BackEnd.Paddock;
 
 import org.junit.Before;
@@ -23,9 +24,9 @@ public class VisitorTest {
 
     @Before
     public void before(){
-        visitor = new Visitor("Louise", 60);
+        visitor = new Visitor("Louise", PaddockName.TRICERATOPS, 60);
         jurassicPark = new Park(25, 1000);
-        paddock1 = new Paddock("North Corner", 20, DinoType.HERBIVORE);
+        paddock1 = new Paddock(PaddockName.BRACHIOSAURUS, 20, DinoType.HERBIVORE);
 
     }
 
@@ -33,6 +34,12 @@ public class VisitorTest {
     public void purseReducesOnEntry(){
         visitor.payEntry(jurassicPark.getEntryfee());
         assertEquals(35, visitor.getPurse());
+    }
+
+    @Test
+    public void canMoveLocations(){
+        visitor.setLocation(PaddockName.TRICERATOPS);
+        assertEquals("Triceratops Paddock", visitor.location());
     }
 
 

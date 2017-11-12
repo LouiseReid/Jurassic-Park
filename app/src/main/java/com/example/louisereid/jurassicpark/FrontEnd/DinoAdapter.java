@@ -20,8 +20,8 @@ import java.util.ArrayList;
 
 public class DinoAdapter extends ArrayAdapter<Dino> {
 
-    public DinoAdapter(Context context, ArrayList<Dino> dinosaurs) {
-        super(context, 0, dinosaurs);
+    public DinoAdapter(Context context, ArrayList<Dino> dinos) {
+        super(context, 0, dinos);
     }
 
     @Override
@@ -31,8 +31,8 @@ public class DinoAdapter extends ArrayAdapter<Dino> {
         }
 
         Dino currentDino = getItem(position);
-        TextView ranking = (TextView) listItemView.findViewById(R.id.itemName);
-        ranking.setText(currentDino.getName());
+        TextView name = (TextView) listItemView.findViewById(R.id.itemName);
+        name.setText(currentDino.getName());
 
         if(getItem(position).getStomachSize() < 1){
             listItemView.setBackgroundColor(Color.RED);

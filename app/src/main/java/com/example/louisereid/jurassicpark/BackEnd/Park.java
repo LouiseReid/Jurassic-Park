@@ -1,5 +1,7 @@
 package com.example.louisereid.jurassicpark.BackEnd;
 
+import com.example.louisereid.jurassicpark.BackEnd.Humans.Visitor;
+
 import java.util.ArrayList;
 
 /**

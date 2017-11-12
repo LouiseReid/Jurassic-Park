@@ -1,5 +1,6 @@
 package com.example.louisereid.jurassicpark.FrontEnd;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -7,6 +8,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 import java.util.HashMap;
+
+import static android.R.attr.name;
+import static android.R.attr.type;
+import static android.R.attr.value;
 
 /**
  * Created by louisereid on 11/11/2017.
@@ -30,7 +35,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db){
         db.execSQL("CREATE TABLE " + DINO_TABLE_NAME + "(id INTEGER primary key autoincrement, type TEXT, name TEXT, age INTEGER, weight INTEGER, stomach INTEGER )");
-        db.execSQL("INSERT INTO " + DINO_TABLE_NAME + "('type', 'name', 'age', 'weight', 'stomach') VALUES ('Diplodocus', 'Larry', '360', '16', '0')");
+        db.execSQL("INSERT INTO " + DINO_TABLE_NAME + "('type', 'name', 'age', 'weight', 'stomach') VALUES('Diplodocus', 'Larry', '360', '16', '0')");
     }
 
 
@@ -39,5 +44,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS" + DINO_TABLE_NAME);
         onCreate(db);
     }
+
+
 }
 

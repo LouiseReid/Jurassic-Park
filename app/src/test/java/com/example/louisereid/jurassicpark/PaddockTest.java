@@ -2,6 +2,7 @@ package com.example.louisereid.jurassicpark;
 
 import com.example.louisereid.jurassicpark.BackEnd.DinoType;
 import com.example.louisereid.jurassicpark.BackEnd.Dinosaur;
+import com.example.louisereid.jurassicpark.BackEnd.PaddockName;
 import com.example.louisereid.jurassicpark.BackEnd.Park;
 import com.example.louisereid.jurassicpark.BackEnd.Paddock;
 import com.example.louisereid.jurassicpark.BackEnd.PaddockState;
@@ -32,9 +33,9 @@ public class PaddockTest {
 
     @Before
     public void before(){
-        paddock1 = new Paddock("North Corner", 20, DinoType.HERBIVORE);
-        paddock2 = new Paddock("East Wing", 5, DinoType.CARNIVORE);
-        paddock3 = new Paddock("Central Enclosure", 1, DinoType.HERBIVORE);
+        paddock1 = new Paddock(PaddockName.BRACHIOSAURUS, 20, DinoType.HERBIVORE);
+        paddock2 = new Paddock(PaddockName.RAPTORS, 5, DinoType.CARNIVORE);
+        paddock3 = new Paddock(PaddockName.TRICERATOPS, 1, DinoType.HERBIVORE);
         apatosaurus = new Dinosaur(DinoType.HERBIVORE, "Al", 190, 30);
         tRex = new Dinosaur(DinoType.CARNIVORE, "Big T", 250, 8);
         diplodocus = new Dinosaur(DinoType.HERBIVORE, "Larry", 360, 16);

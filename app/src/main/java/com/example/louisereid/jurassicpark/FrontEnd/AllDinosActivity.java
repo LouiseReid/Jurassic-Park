@@ -11,6 +11,8 @@ import com.example.louisereid.jurassicpark.R;
 
 import java.util.ArrayList;
 
+import static com.example.louisereid.jurassicpark.FrontEnd.DBHelper.DINO_TABLE_NAME;
+
 public class AllDinosActivity extends AppCompatActivity {
 
     DBHelper dbHelper;
@@ -21,11 +23,13 @@ public class AllDinosActivity extends AppCompatActivity {
         setContentView(R.layout.dinos_list);
 
         dbHelper = new DBHelper(this);
-        ArrayList<Dino> dinosaurs = Dino.all(dbHelper);
+        ArrayList<Dino> dinos = Dino.all(dbHelper);
 
-        DinoAdapter dinoAdapter = new DinoAdapter(this, dinosaurs);
+        DinoAdapter dinoAdapter = new DinoAdapter(this, dinos);
         ListView listView = (ListView)findViewById(R.id.dinoList);
         listView.setAdapter(dinoAdapter);
+
+
 
     }
 

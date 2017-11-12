@@ -12,13 +12,13 @@ import java.util.Random;
 public class Paddock {
 
 
-    private String location;
+    private PaddockName location;
     private int capacity;
     private DinoType type;
     private ArrayList<Dinosaur> dinosaurs;
     private ArrayList<PaddockState> paddockState;
 
-    public Paddock(String location, int capacity, DinoType type) {
+    public Paddock(PaddockName location, int capacity, DinoType type) {
         this.location = location;
         this.capacity = capacity;
         this.type = type;
@@ -33,7 +33,7 @@ public class Paddock {
     }
 
 
-    public String getLocation() {
+    public PaddockName getLocation() {
         return location;
     }
 
