@@ -17,7 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".FrontEnd.AllDinosActivity" />
-        <activity android:name=".FrontEnd.DinoActivity"></activity>
+        <activity android:name=".FrontEnd.DinoActivity" />
+        <activity android:name=".FrontEnd.OptionsActivity" />
+        <activity android:name=".FrontEnd.AllRaptorsActivity" />
+        <activity android:name=".FrontEnd.AllTRexActivity" />
+        <activity android:name=".FrontEnd.AllAviaryActivity" />
+        <activity android:name=".FrontEnd.AllTriceratopsActivity"></activity>
     </application>
 
 </manifest>

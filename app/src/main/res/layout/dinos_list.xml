@@ -6,16 +6,99 @@
     android:layout_height="match_parent"
     tools:context="com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivity">
 
-    <ListView
-        android:id="@+id/dinoList"
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        android:layout_marginBottom="8dp"
+    <TextView
+        android:id="@+id/topBar"
+        android:layout_width="402dp"
+        android:layout_height="56dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="6dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.571" />
+
+    <ListView
+        android:id="@+id/dinoList"
+        android:layout_width="402dp"
+        android:layout_height="532dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="62dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/feedNowKey"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_red_light"
+        app:layout_constraintBottom_toBottomOf="@+id/topBar"
+        app:layout_constraintLeft_toLeftOf="@+id/topBar"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feedNowLabel"
+        android:layout_width="69dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/feed_now"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@+id/feedNowKey"
+        app:layout_constraintTop_toTopOf="@+id/topBar" />
+
+    <TextView
+        android:id="@+id/hungryKey"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintLeft_toRightOf="@+id/feedNowLabel"
+        app:layout_constraintTop_toTopOf="@+id/topBar" />
+
+    <TextView
+        android:id="@+id/hungryLabel"
+        android:layout_width="69dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hungry"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@+id/hungryKey"
+        app:layout_constraintTop_toTopOf="@+id/topBar" />
+
+    <TextView
+        android:id="@+id/okKey"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintLeft_toRightOf="@+id/hungryLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/okLabel"
+        android:layout_width="69dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="22dp"
+        android:text="FINE"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@+id/okKey"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

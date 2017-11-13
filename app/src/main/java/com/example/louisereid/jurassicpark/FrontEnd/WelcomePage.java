@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivity;
 import com.example.louisereid.jurassicpark.R;
 
 public class WelcomePage extends AppCompatActivity {
@@ -22,7 +21,7 @@ public class WelcomePage extends AppCompatActivity {
     }
 
     public void onButtonClick(View button){
-        Intent i = new Intent(this, AllDinosActivity.class);
+        Intent i = new Intent(this, OptionsActivity.class);
         startActivity(i);
     }
 }

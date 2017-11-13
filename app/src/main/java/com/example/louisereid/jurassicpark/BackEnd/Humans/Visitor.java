@@ -1,7 +1,6 @@
 package com.example.louisereid.jurassicpark.BackEnd.Humans;
 
-import com.example.louisereid.jurassicpark.BackEnd.Humans.Human;
-import com.example.louisereid.jurassicpark.BackEnd.PaddockName;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 
 /**
  * Created by louisereid on 10/11/2017.

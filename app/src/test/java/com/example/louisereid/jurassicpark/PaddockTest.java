@@ -1,11 +1,10 @@
 package com.example.louisereid.jurassicpark;
 
-import com.example.louisereid.jurassicpark.BackEnd.DinoType;
-import com.example.louisereid.jurassicpark.BackEnd.Dinosaur;
-import com.example.louisereid.jurassicpark.BackEnd.PaddockName;
-import com.example.louisereid.jurassicpark.BackEnd.Park;
-import com.example.louisereid.jurassicpark.BackEnd.Paddock;
-import com.example.louisereid.jurassicpark.BackEnd.PaddockState;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.Dinosaur;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.Paddock;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockState;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -36,9 +35,9 @@ public class PaddockTest {
         paddock1 = new Paddock(PaddockName.BRACHIOSAURUS, 20, DinoType.HERBIVORE);
         paddock2 = new Paddock(PaddockName.RAPTORS, 5, DinoType.CARNIVORE);
         paddock3 = new Paddock(PaddockName.TRICERATOPS, 1, DinoType.HERBIVORE);
-        apatosaurus = new Dinosaur(DinoType.HERBIVORE, "Al", 190, 30);
-        tRex = new Dinosaur(DinoType.CARNIVORE, "Big T", 250, 8);
-        diplodocus = new Dinosaur(DinoType.HERBIVORE, "Larry", 360, 16);
+        apatosaurus = new Dinosaur(DinoType.HERBIVORE, "Al", 190, 30, PaddockName.PETTINGZOO);
+        tRex = new Dinosaur(DinoType.CARNIVORE, "Big T", 250, 8, PaddockName.TREX);
+        diplodocus = new Dinosaur(DinoType.HERBIVORE, "Larry", 360, 16, PaddockName.QUARANTINE);
         testState = new ArrayList<>();
         testState.add(PaddockState.RAMPAGE);
         testState.add(PaddockState.CALM);
@@ -126,6 +125,7 @@ public class PaddockTest {
         paddock1.transferDino(diplodocus, paddock1, paddock3);
         assertEquals(0, paddock1.paddockSize());
         assertEquals(1, paddock3.paddockSize());
+        assertEquals(PaddockName.TRICERATOPS, diplodocus.getLocation());
 
     }
 

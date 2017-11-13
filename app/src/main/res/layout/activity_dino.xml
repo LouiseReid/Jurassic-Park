@@ -15,7 +15,8 @@
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Name" />
+        tools:text="Name"
+        android:layout_marginStart="41dp" />
 
     <TextView
         android:id="@+id/stomachView"
@@ -29,7 +30,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="stomach size"
-        app:layout_constraintHorizontal_bias="0.509" />
+        app:layout_constraintHorizontal_bias="0.509"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="68dp" />
 
     <Button
         android:id="@+id/button"
@@ -45,5 +48,20 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameView" />
+        app:layout_constraintTop_toBottomOf="@+id/nameView"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <ImageView
+        android:id="@+id/test"
+        android:layout_width="284dp"
+        android:layout_height="218dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@android:color/background_light" />
+
 </android.support.constraint.ConstraintLayout>

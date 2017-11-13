@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Jurassic Park</string>
+    <string name="feed_now">FEED NOW</string>
+    <string name="hungry">HUNGRY</string>
 </resources>

@@ -1,10 +1,10 @@
 package com.example.louisereid.jurassicpark;
 
-import com.example.louisereid.jurassicpark.BackEnd.DinoType;
-import com.example.louisereid.jurassicpark.BackEnd.PaddockName;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 import com.example.louisereid.jurassicpark.BackEnd.Park;
 import com.example.louisereid.jurassicpark.BackEnd.Humans.Visitor;
-import com.example.louisereid.jurassicpark.BackEnd.Paddock;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.Paddock;
 
 import org.junit.Before;
 import org.junit.Test;

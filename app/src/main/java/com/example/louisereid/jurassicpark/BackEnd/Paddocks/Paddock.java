@@ -1,8 +1,10 @@
-package com.example.louisereid.jurassicpark.BackEnd;
+package com.example.louisereid.jurassicpark.BackEnd.Paddocks;
+
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.Dinosaur;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -113,6 +115,7 @@ public class Paddock {
 
     public void transferDino(Dinosaur dinosaur, Paddock paddock1, Paddock paddock2){
         paddock1.removeFromPaddock(dinosaur);
+        dinosaur.setLocation(paddock2.location);
         paddock2.addToPaddock(dinosaur);
     }
 

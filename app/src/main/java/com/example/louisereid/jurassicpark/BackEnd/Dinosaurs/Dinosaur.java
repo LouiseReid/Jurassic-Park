@@ -1,8 +1,9 @@
-package com.example.louisereid.jurassicpark.BackEnd;
+package com.example.louisereid.jurassicpark.BackEnd.Dinosaurs;
 
 import com.example.louisereid.jurassicpark.BackEnd.Food.Edible;
 import com.example.louisereid.jurassicpark.BackEnd.Food.Meat;
 import com.example.louisereid.jurassicpark.BackEnd.Food.Plants;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 
 import java.util.ArrayList;
 
@@ -20,14 +21,16 @@ public class Dinosaur {
     private String name;
     private int age;
     private int weight;
+    private PaddockName location;
     private ArrayList<Edible> stomach;
     private int stomachSize;
 
-    public Dinosaur(DinoType type, String name, int age, int weight) {
+    public Dinosaur(DinoType type, String name, int age, int weight, PaddockName location) {
         this.type = type;
         this.name = name;
         this.age = age;
         this.weight = weight;
+        this.location = location;
         stomach = new ArrayList<>();
     }
 
@@ -45,7 +48,13 @@ public class Dinosaur {
         return age;
     }
 
+    public PaddockName getLocation() {
+        return location;
+    }
 
+    public void setLocation(PaddockName location) {
+        this.location = location;
+    }
 
     public ArrayList<Edible> getStomach() {
         return stomach;

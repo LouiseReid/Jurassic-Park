@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.louisereid.jurassicpark.BackEnd.Dinosaur;
 import com.example.louisereid.jurassicpark.R;
 
 import java.util.ArrayList;
@@ -33,6 +32,8 @@ public class DinoAdapter extends ArrayAdapter<Dino> {
         Dino currentDino = getItem(position);
         TextView name = (TextView) listItemView.findViewById(R.id.itemName);
         name.setText(currentDino.getName());
+        TextView type = (TextView)listItemView.findViewById(R.id.itemType);
+        type.setText(currentDino.getType());
 
         if(getItem(position).getStomachSize() < 1){
             listItemView.setBackgroundColor(Color.RED);

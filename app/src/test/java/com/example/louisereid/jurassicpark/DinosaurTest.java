@@ -1,9 +1,10 @@
 package com.example.louisereid.jurassicpark;
 
-import com.example.louisereid.jurassicpark.BackEnd.DinoType;
-import com.example.louisereid.jurassicpark.BackEnd.Dinosaur;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.Dinosaur;
 import com.example.louisereid.jurassicpark.BackEnd.Food.Meat;
 import com.example.louisereid.jurassicpark.BackEnd.Food.Plants;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,9 +25,9 @@ public class DinosaurTest {
 
     @Before
     public void before(){
-        tRex = new Dinosaur(DinoType.CARNIVORE, "Big T", 250, 8);
-        diplodocus = new Dinosaur(DinoType.HERBIVORE, "Larry", 360, 16);
-        apatosaurus = new Dinosaur(DinoType.HERBIVORE, "Al", 190, 30);
+        tRex = new Dinosaur(DinoType.CARNIVORE, "Big T", 250, 8, PaddockName.TREX);
+        diplodocus = new Dinosaur(DinoType.HERBIVORE, "Larry", 360, 16, PaddockName.PETTINGZOO);
+        apatosaurus = new Dinosaur(DinoType.HERBIVORE, "Al", 190, 30, PaddockName.BRACHIOSAURUS);
         steak = new Meat(500, DinoType.CARNIVORE);
         foliage = new Plants(200, DinoType.HERBIVORE);
     }

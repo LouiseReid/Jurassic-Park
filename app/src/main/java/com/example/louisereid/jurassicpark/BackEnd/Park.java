@@ -1,6 +1,8 @@
 package com.example.louisereid.jurassicpark.BackEnd;
 
 import com.example.louisereid.jurassicpark.BackEnd.Humans.Visitor;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.Paddock;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockState;
 
 import java.util.ArrayList;
 

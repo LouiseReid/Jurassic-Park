@@ -1,6 +1,6 @@
 package com.example.louisereid.jurassicpark.BackEnd.Humans;
 
-import com.example.louisereid.jurassicpark.BackEnd.PaddockName;
+import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 
 /**
  * Created by louisereid on 12/11/2017.
@@ -19,7 +19,7 @@ public class Ranger extends Human {
         return shiftLength;
     }
 
-    public void setShiftLength(int shiftLength) {
-        this.shiftLength = shiftLength;
+    public void changeShiftLength(int shiftLength) {
+        this.shiftLength += shiftLength;
     }
 }

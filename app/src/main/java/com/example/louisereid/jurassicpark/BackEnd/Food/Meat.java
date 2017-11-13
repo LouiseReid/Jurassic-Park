@@ -1,7 +1,6 @@
 package com.example.louisereid.jurassicpark.BackEnd.Food;
 
-import com.example.louisereid.jurassicpark.BackEnd.DinoType;
-import com.example.louisereid.jurassicpark.BackEnd.Food.Food;
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType;
 
 /**
  * Created by louisereid on 10/11/2017.
