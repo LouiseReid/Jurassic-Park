@@ -1,11 +1,15 @@
-package com.example.louisereid.jurassicpark.FrontEnd;
+package com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
+import com.example.louisereid.jurassicpark.FrontEnd.DBHelper;
+import com.example.louisereid.jurassicpark.FrontEnd.Classes.Dino;
+import com.example.louisereid.jurassicpark.FrontEnd.OtherActivities.DinoActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.Classes.DinoAdapter;
+import com.example.louisereid.jurassicpark.FrontEnd.OtherActivities.MyMenu;
 import com.example.louisereid.jurassicpark.R;
 
 import java.util.ArrayList;

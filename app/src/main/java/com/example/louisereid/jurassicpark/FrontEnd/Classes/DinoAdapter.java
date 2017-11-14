@@ -1,4 +1,4 @@
-package com.example.louisereid.jurassicpark.FrontEnd;
+package com.example.louisereid.jurassicpark.FrontEnd.Classes;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.louisereid.jurassicpark.FrontEnd.Classes.Dino;
 import com.example.louisereid.jurassicpark.R;
 
 import java.util.ArrayList;

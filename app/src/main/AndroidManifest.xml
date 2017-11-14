@@ -9,21 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FrontEnd.WelcomePage">
+        <activity android:name=".FrontEnd.OtherActivities.WelcomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FrontEnd.AllDinosActivity" />
-        <activity android:name=".FrontEnd.DinoActivity" />
-        <activity android:name=".FrontEnd.OptionsActivity" />
-        <activity android:name=".FrontEnd.AllRaptorsActivity" />
-        <activity android:name=".FrontEnd.AllTRexActivity" />
-        <activity android:name=".FrontEnd.AllAviaryActivity" />
-        <activity android:name=".FrontEnd.AllTriceratopsActivity" />
-        <activity android:name=".FrontEnd.MyMenu"></activity>
+        <activity android:name=".FrontEnd.AllDinosActivities.AllDinosActivity" />
+        <activity android:name=".FrontEnd.OtherActivities.DinoActivity" />
+        <activity android:name=".FrontEnd.OtherActivities.OptionsActivity" />
+        <activity android:name=".FrontEnd.AllDinosActivities.AllRaptorsActivity" />
+        <activity android:name=".FrontEnd.AllDinosActivities.AllTRexActivity" />
+        <activity android:name=".FrontEnd.AllDinosActivities.AllAviaryActivity" />
+        <activity android:name=".FrontEnd.AllDinosActivities.AllTriceratopsActivity" />
+        <activity android:name=".FrontEnd.OtherActivities.MyMenu"></activity>
     </application>
 
 </manifest>

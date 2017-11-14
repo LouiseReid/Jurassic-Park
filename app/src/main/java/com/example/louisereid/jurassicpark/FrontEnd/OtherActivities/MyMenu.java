@@ -1,4 +1,4 @@
-package com.example.louisereid.jurassicpark.FrontEnd;
+package com.example.louisereid.jurassicpark.FrontEnd.OtherActivities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllAviaryActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllDinosActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllRaptorsActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllTRexActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllTriceratopsActivity;
 import com.example.louisereid.jurassicpark.R;
 
 public class MyMenu extends AppCompatActivity {

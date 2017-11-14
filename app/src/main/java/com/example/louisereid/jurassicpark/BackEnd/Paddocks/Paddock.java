@@ -101,7 +101,7 @@ public class Paddock {
         return dinosaurs.size();
     }
 
-    public void checkForRampage(){
+    public void Rampage(){
         if(getState() == PaddockState.RAMPAGE){
             dinosaurs.clear();
         }

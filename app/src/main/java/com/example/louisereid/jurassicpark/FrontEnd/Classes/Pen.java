@@ -1,4 +1,4 @@
-package com.example.louisereid.jurassicpark.FrontEnd;
+package com.example.louisereid.jurassicpark.FrontEnd.Classes;
 
 /**
  * Created by louisereid on 13/11/2017.

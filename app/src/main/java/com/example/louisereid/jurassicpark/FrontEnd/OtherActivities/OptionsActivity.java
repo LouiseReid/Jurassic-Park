@@ -1,12 +1,14 @@
-package com.example.louisereid.jurassicpark.FrontEnd;
+package com.example.louisereid.jurassicpark.FrontEnd.OtherActivities;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.*;
-import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllAviaryActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllRaptorsActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllTRexActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllTriceratopsActivity;
 import com.example.louisereid.jurassicpark.R;
 
 public class OptionsActivity extends MyMenu {

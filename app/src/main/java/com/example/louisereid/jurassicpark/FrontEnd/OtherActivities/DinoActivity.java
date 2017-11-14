@@ -1,4 +1,4 @@
-package com.example.louisereid.jurassicpark.FrontEnd;
+package com.example.louisereid.jurassicpark.FrontEnd.OtherActivities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType;
 import com.example.louisereid.jurassicpark.BackEnd.Paddocks.Paddock;
 import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockState;
+import com.example.louisereid.jurassicpark.FrontEnd.Classes.Dino;
+import com.example.louisereid.jurassicpark.FrontEnd.Classes.Pen;
+import com.example.louisereid.jurassicpark.FrontEnd.DBHelper;
 import com.example.louisereid.jurassicpark.R;
 
 public class DinoActivity extends MyMenu {
@@ -127,7 +130,7 @@ public class DinoActivity extends MyMenu {
 
             blackBG.setVisibility(View.VISIBLE);
 
-//            Dino.deleteAll(dbHelper);
+            Dino.deleteAll(dbHelper);
         }
     }
 

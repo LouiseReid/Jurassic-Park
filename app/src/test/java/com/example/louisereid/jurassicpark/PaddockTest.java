@@ -87,7 +87,7 @@ public class PaddockTest {
         paddock1.addToPaddock(diplodocus);
         Paddock spy = Mockito.spy(paddock1);
         Mockito.when(spy.getState()).thenReturn(PaddockState.RAMPAGE);
-        spy.checkForRampage();
+        spy.Rampage();
         assertEquals(0, paddock1.paddockSize());
 
     }
@@ -98,7 +98,7 @@ public class PaddockTest {
         paddock1.addToPaddock(diplodocus);
         Paddock spy = Mockito.spy(paddock1);
         Mockito.when(spy.getState()).thenReturn(PaddockState.CALM);
-        spy.checkForRampage();
+        spy.Rampage();
         assertEquals(2, paddock1.paddockSize());
     }
 
