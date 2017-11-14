@@ -22,7 +22,8 @@
         <activity android:name=".FrontEnd.AllRaptorsActivity" />
         <activity android:name=".FrontEnd.AllTRexActivity" />
         <activity android:name=".FrontEnd.AllAviaryActivity" />
-        <activity android:name=".FrontEnd.AllTriceratopsActivity"></activity>
+        <activity android:name=".FrontEnd.AllTriceratopsActivity" />
+        <activity android:name=".FrontEnd.MyMenu"></activity>
     </application>
 
 </manifest>

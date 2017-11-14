@@ -10,7 +10,7 @@ import com.example.louisereid.jurassicpark.R;
 
 import java.util.ArrayList;
 
-public class AllTriceratopsActivity extends AppCompatActivity {
+public class AllTriceratopsActivity extends MyMenu {
 
     DBHelper dbHelper;
 
@@ -19,8 +19,10 @@ public class AllTriceratopsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dinos_list);
 
+
         dbHelper = new DBHelper(this);
         ArrayList<Dino> dinos = Dino.allTriceratops(dbHelper);
+
 
         DinoAdapter dinoAdapter = new DinoAdapter(this, dinos);
         ListView listView = (ListView)findViewById(R.id.dinoList);

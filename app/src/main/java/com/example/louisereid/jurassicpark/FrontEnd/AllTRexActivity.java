@@ -10,7 +10,7 @@ import com.example.louisereid.jurassicpark.R;
 
 import java.util.ArrayList;
 
-public class AllTRexActivity extends AppCompatActivity {
+public class AllTRexActivity extends MyMenu {
 
 
     DBHelper dbHelper;

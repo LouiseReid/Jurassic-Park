@@ -2,4 +2,8 @@
     <string name="app_name">Jurassic Park</string>
     <string name="feed_now">FEED NOW</string>
     <string name="hungry">HUNGRY</string>
+    <color name="black">#000</color>
+    <color name="grey">#00ffffff</color>
+    <string name="home">Home</string>
+
 </resources>

@@ -1,5 +1,8 @@
 package com.example.louisereid.jurassicpark.BackEnd.Humans;
 
+import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.Dinosaur;
+import com.example.louisereid.jurassicpark.BackEnd.Food.Meat;
+import com.example.louisereid.jurassicpark.BackEnd.Food.Plants;
 import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 
 /**
@@ -7,6 +10,10 @@ import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
  */
 
 public class Ranger extends Human {
+
+    Dinosaur dinosaur;
+    Plants plants;
+    Meat meat;
 
     private int shiftLength;
 
@@ -21,5 +28,14 @@ public class Ranger extends Human {
 
     public void changeShiftLength(int shiftLength) {
         this.shiftLength += shiftLength;
+    }
+
+    public void feedHerbivore(Dinosaur dinosaur, Plants plants){
+        dinosaur.feedPlants(plants);
+    }
+
+    public void feedCarnivore(Dinosaur dinosaur, Meat meat){
+        dinosaur.feedMeat(meat);
+        changeShiftLength(-2);
     }
 }

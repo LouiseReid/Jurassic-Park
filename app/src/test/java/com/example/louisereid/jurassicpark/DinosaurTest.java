@@ -30,6 +30,7 @@ public class DinosaurTest {
         apatosaurus = new Dinosaur(DinoType.HERBIVORE, "Al", 190, 30, PaddockName.BRACHIOSAURUS);
         steak = new Meat(500, DinoType.CARNIVORE);
         foliage = new Plants(200, DinoType.HERBIVORE);
+
     }
 
     @Test

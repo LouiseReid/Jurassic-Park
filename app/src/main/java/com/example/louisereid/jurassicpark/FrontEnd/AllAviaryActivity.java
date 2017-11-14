@@ -10,7 +10,7 @@ import com.example.louisereid.jurassicpark.R;
 
 import java.util.ArrayList;
 
-public class AllAviaryActivity extends AppCompatActivity {
+public class AllAviaryActivity extends MyMenu {
 
 
     DBHelper dbHelper;

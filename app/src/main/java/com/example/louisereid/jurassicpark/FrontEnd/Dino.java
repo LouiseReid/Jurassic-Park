@@ -182,6 +182,12 @@ public class Dino {
     }
 
 
+    public static boolean deleteAll(DBHelper dbHelper){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.execSQL("DELETE FROM " + DINO_TABLE);
+        return true;
+    }
+
 
 
 }

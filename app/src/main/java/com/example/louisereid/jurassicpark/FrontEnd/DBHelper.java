@@ -38,7 +38,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public DBHelper(Context context){
-        super(context, DATABASE_NAME, null, 6);
+        super(context, DATABASE_NAME, null, 7);
     }
 
     public void onCreate(SQLiteDatabase db){
@@ -56,7 +56,6 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Triceratop', 'Terry', 120, 16, 0, 4)");
 
     }
-
 
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){

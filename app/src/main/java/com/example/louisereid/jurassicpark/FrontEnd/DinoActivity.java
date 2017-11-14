@@ -1,9 +1,11 @@
 package com.example.louisereid.jurassicpark.FrontEnd;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,12 +15,14 @@ import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockState;
 import com.example.louisereid.jurassicpark.R;
 
-public class DinoActivity extends AppCompatActivity {
+public class DinoActivity extends MyMenu {
 
     private TextView name;
     private TextView stomach;
     private ImageView paddockState;
     private Dino dino;
+    private Button feedButton;
+    private ImageView blackBG;
 
 
     Paddock paddock;
@@ -33,7 +37,9 @@ public class DinoActivity extends AppCompatActivity {
 
         name = (TextView)findViewById(R.id.nameView);
         stomach = (TextView)findViewById(R.id.stomachView);
-        paddockState = (ImageView)findViewById(R.id.test);
+        paddockState = (ImageView)findViewById(R.id.paddockStateView);
+        feedButton = (Button)findViewById(R.id.feedBtn);
+        blackBG = (ImageView)findViewById(R.id.blackbackView);
 
 
         Intent i = getIntent();
@@ -50,6 +56,8 @@ public class DinoActivity extends AppCompatActivity {
 
         name.setText(dino.getName());
         stomach.setText(dino.getStomachSize().toString());
+        paddockState.setRotation((float) -45.0);
+        blackBG.setVisibility(View.INVISIBLE);
 
 
     }
@@ -59,16 +67,19 @@ public class DinoActivity extends AppCompatActivity {
         dino.feed(dbHelper);
         stomach.setText(dino.getStomachSize().toString());
 
-//        Intent i = new Intent(this, AllDinosActivity.class);
-//        startActivity(i);
-
         paddockState.setVisibility(View.INVISIBLE);
         PaddockState state = paddock.getState();
         if(state.equals(PaddockState.RAMPAGE)){
             paddockState.setVisibility(View.VISIBLE);
             paddockState.setImageResource(state.getImage());
+            feedButton.setVisibility(View.INVISIBLE);
+            blackBG.setVisibility(View.VISIBLE);
+
+
         }
     }
+
+
 
 
 
