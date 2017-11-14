@@ -4,6 +4,10 @@
     <string name="hungry">HUNGRY</string>
     <color name="black">#000</color>
     <color name="grey">#00ffffff</color>
-    <string name="home">Home</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_raptors">Raptors</string>
+    <string name="menu_trex">T-Rex</string>
+    <string name="menu_aviary">Aviary</string>
+    <string name="menu_triceratops">Triceratops</string>
 
 </resources>

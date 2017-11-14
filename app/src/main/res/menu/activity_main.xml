@@ -4,6 +4,22 @@
     <item
         android:id="@+id/home"
         android:icon="@android:drawable/ic_menu_upload"
-        android:title="@string/home" />
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/raptors"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="@string/menu_raptors" />
+    <item
+        android:id="@+id/trex"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="@string/menu_trex" />
+    <item
+        android:id="@+id/aviary"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="@string/menu_aviary" />
+    <item
+        android:id="@+id/triceratops"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="@string/menu_triceratops" />
 
 </menu>

@@ -4,61 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context="com.example.louisereid.jurassicpark.FrontEnd.OptionsActivity">
 
-    <Button
+    <ImageButton
         android:id="@+id/raptorsBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="57dp"
-        android:layout_marginTop="130dp"
+        android:layout_width="340dp"
+        android:layout_height="83dp"
+        android:background="@drawable/raptors"
         android:onClick="onRaptorButtonClick"
-        android:text="Raptors"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/trexBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="130dp"
-        android:onClick="onTRexButtonClick"
-        android:text="TRex"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintLeft_toRightOf="@+id/raptorsBtn"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/aviaryBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="57dp"
-        android:layout_marginTop="0dp"
-        android:onClick="onAviaryButtonClick"
-        android:text="Aviary"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raptorsBtn"
-        app:layout_constraintVertical_bias="0.268" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="57dp" />
 
-    <Button
-        android:id="@+id/tricerBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+    <ImageButton
+        android:id="@+id/trexBtn"
+        android:layout_width="340dp"
+        android:layout_height="83dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="99dp"
-        android:onClick="onTriceratopsButtonClick"
-        android:text="Triceratops"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintLeft_toRightOf="@+id/aviaryBtn"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/trex"
+        android:onClick="onTRexButtonClick"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trexBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/raptorsBtn" />
+
+    <ImageButton
+        android:id="@+id/aviaryBtn"
+        android:layout_width="340dp"
+        android:layout_height="83dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/aviary"
+        android:onClick="onAviaryButtonClick"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trexBtn" />
+
+    <ImageButton
+        android:id="@+id/tricBtn"
+        android:layout_width="340dp"
+        android:layout_height="83dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/triceratops"
+        android:onClick="onTriceratopsButtonClick"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aviaryBtn" />
 </android.support.constraint.ConstraintLayout>

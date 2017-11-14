@@ -3,6 +3,7 @@ package com.example.louisereid.jurassicpark.FrontEnd;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
 
 import java.util.ArrayList;
@@ -178,6 +179,51 @@ public class Dino {
         ContentValues conValues = new ContentValues();
         conValues.put(DINO_COLUMN_STOMACH, this.stomachSize);
         db.update(DINO_TABLE, conValues, selection, values);
+        return true;
+    }
+
+
+    public boolean moveToRaptors(DBHelper dbHelper){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String selection = " id = ?";
+        String[] values = {this.id.toString()};
+        this.pen = 1;
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DINO_COLUMN_PEN, this.pen);
+        db.update(DINO_TABLE, contentValues, selection, values);
+        return true;
+    }
+
+    public boolean moveToTRex(DBHelper dbHelper){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String selection = " id = ?";
+        String[] values = {this.id.toString()};
+        this.pen = 2;
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DINO_COLUMN_PEN, this.pen);
+        db.update(DINO_TABLE, contentValues, selection, values);
+        return true;
+    }
+
+    public boolean moveToAviary(DBHelper dbHelper){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String selection = " id = ?";
+        String[] values = {this.id.toString()};
+        this.pen = 3;
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DINO_COLUMN_PEN, this.pen);
+        db.update(DINO_TABLE, contentValues, selection, values);
+        return true;
+    }
+
+    public boolean moveToTriceratops(DBHelper dbHelper){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String selection = " id = ?";
+        String[] values = {this.id.toString()};
+        this.pen = 4;
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DINO_COLUMN_PEN, this.pen);
+        db.update(DINO_TABLE, contentValues, selection, values);
         return true;
     }
 

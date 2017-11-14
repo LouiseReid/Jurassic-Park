@@ -18,11 +18,11 @@ import com.example.louisereid.jurassicpark.R;
 public class DinoActivity extends MyMenu {
 
     private TextView name;
-    private TextView stomach;
     private ImageView paddockState;
     private Dino dino;
     private Button feedButton;
     private ImageView blackBG;
+    private Button moveRaptors;
 
 
     Paddock paddock;
@@ -36,10 +36,10 @@ public class DinoActivity extends MyMenu {
         paddock = new Paddock(PaddockName.BRACHIOSAURUS, 20, DinoType.HERBIVORE);
 
         name = (TextView)findViewById(R.id.nameView);
-        stomach = (TextView)findViewById(R.id.stomachView);
         paddockState = (ImageView)findViewById(R.id.paddockStateView);
         feedButton = (Button)findViewById(R.id.feedBtn);
         blackBG = (ImageView)findViewById(R.id.blackbackView);
+        moveRaptors = (Button)findViewById(R.id.raptorsMove);
 
 
         Intent i = getIntent();
@@ -55,9 +55,13 @@ public class DinoActivity extends MyMenu {
 
 
         name.setText(dino.getName());
-        stomach.setText(dino.getStomachSize().toString());
         paddockState.setRotation((float) -45.0);
         blackBG.setVisibility(View.INVISIBLE);
+        moveRaptors.setVisibility(View.INVISIBLE);
+
+        if(dino.getType().equals("T-Rex")){
+            moveRaptors.setVisibility(View.VISIBLE);
+        }
 
 
     }
@@ -65,22 +69,25 @@ public class DinoActivity extends MyMenu {
     public void onButtonClickFeed(View button){
         DBHelper dbHelper = new DBHelper(this);
         dino.feed(dbHelper);
-        stomach.setText(dino.getStomachSize().toString());
-
-        paddockState.setVisibility(View.INVISIBLE);
-        PaddockState state = paddock.getState();
-        if(state.equals(PaddockState.RAMPAGE)){
-            paddockState.setVisibility(View.VISIBLE);
-            paddockState.setImageResource(state.getImage());
-            feedButton.setVisibility(View.INVISIBLE);
-            blackBG.setVisibility(View.VISIBLE);
 
 
-        }
+//        paddockState.setVisibility(View.INVISIBLE);
+//        PaddockState state = paddock.getState();
+//        if(state.equals(PaddockState.RAMPAGE)){
+//            paddockState.setVisibility(View.VISIBLE);
+//            paddockState.setImageResource(state.getImage());
+//            feedButton.setVisibility(View.INVISIBLE);
+//            moveRaptors.setVisibility(View.INVISIBLE);
+//            blackBG.setVisibility(View.VISIBLE);
+////            Dino.deleteAll(dbHelper);
+//        }
     }
 
 
-
+    public void onButtonClickRaptors(View Button){
+        DBHelper dbHelper = new DBHelper(this);
+        dino.moveToRaptors(dbHelper);
+    }
 
 
 
