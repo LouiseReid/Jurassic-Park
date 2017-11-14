@@ -36,7 +36,7 @@ public class DinoAdapter extends ArrayAdapter<Dino> {
         type.setText(currentDino.getType());
 
         if(getItem(position).getStomachSize() < 5){
-            listItemView.setBackgroundColor(Color.RED);
+            listItemView.setBackgroundColor(Color.rgb(221, 59, 59));
         }
         if(getItem(position).getStomachSize() >= 5 && getItem(position).getStomachSize() < 8){
             listItemView.setBackgroundColor(Color.rgb(255,165,0));

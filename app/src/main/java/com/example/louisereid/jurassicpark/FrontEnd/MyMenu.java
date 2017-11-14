@@ -40,7 +40,12 @@ public class MyMenu extends AppCompatActivity {
             Intent raptors = new Intent(this, AllTriceratopsActivity.class);
             startActivity(raptors);
             return true;
+        }       if(item.getItemId() == R.id.all){
+            Intent raptors = new Intent(this, AllDinosActivity.class);
+            startActivity(raptors);
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }

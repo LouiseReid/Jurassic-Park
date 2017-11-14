@@ -38,7 +38,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public DBHelper(Context context){
-        super(context, DATABASE_NAME, null, 8);
+        super(context, DATABASE_NAME, null, 11);
     }
 
     public void onCreate(SQLiteDatabase db){
@@ -50,10 +50,26 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + PEN_TABLE + "(location) VALUES('Aviary')");
         db.execSQL("INSERT INTO " + PEN_TABLE + "(location) VALUES('Triceratops')");
 
-        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Velociraptor', 'Blue', 120, 16, 0, 1)");
-        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('T-Rex', 'Big T', 120, 16, 0, 2)");
-        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Pterosaurs', 'Peter', 120, 16, 0, 3)");
-        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Triceratop', 'Terry', 120, 16, 0, 4)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Velociraptor', 'Blue', 120, 150, 0, 1)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Velociraptor', 'Charlie', 120, 140, 4, 1)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Velociraptor', 'Delta', 120, 147, 0, 1)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Velociraptor', 'Echo', 120, 139, 7, 1)");
+
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('T-Rex', 'Rex', 300, 8160, 0, 2)");
+
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Pterosaurs', 'Peter', 278, 250, 0, 3)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Pterosaurs', 'Polly', 210, 243, 1, 3)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Pterodactyl', 'Penelope', 240, 252, 3, 3)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Pterodactyl', 'Francis', 350, 230, 0, 3)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Pteranodon', 'Ted', 354, 229, 8, 3)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Pteranodon', 'Bob', 355, 251, 4, 3)");
+
+
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Triceratop', 'Terry', 5000, 16, 0, 4)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Triceratop', 'Tracy', 5103, 16, 2, 4)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Triceratop', 'Agnes', 4800, 16, 4, 4)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Triceratop', 'Holly', 4982, 16, 1, 4)");
+        db.execSQL("INSERT INTO " + DINO_TABLE + "(type, name, age, weight, stomach, pen) VALUES('Triceratop', 'Bruno', 5001, 16, 6, 4)");
 
     }
 

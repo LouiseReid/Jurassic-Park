@@ -205,28 +205,6 @@ public class Dino {
         return true;
     }
 
-    public boolean moveToAviary(DBHelper dbHelper){
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        String selection = " id = ?";
-        String[] values = {this.id.toString()};
-        this.pen = 3;
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(DINO_COLUMN_PEN, this.pen);
-        db.update(DINO_TABLE, contentValues, selection, values);
-        return true;
-    }
-
-    public boolean moveToTriceratops(DBHelper dbHelper){
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        String selection = " id = ?";
-        String[] values = {this.id.toString()};
-        this.pen = 4;
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(DINO_COLUMN_PEN, this.pen);
-        db.update(DINO_TABLE, contentValues, selection, values);
-        return true;
-    }
-
 
     public static boolean deleteAll(DBHelper dbHelper){
         SQLiteDatabase db = dbHelper.getWritableDatabase();

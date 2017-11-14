@@ -9,5 +9,6 @@
     <string name="menu_trex">T-Rex</string>
     <string name="menu_aviary">Aviary</string>
     <string name="menu_triceratops">Triceratops</string>
+    <string name="all">All Dinos</string>
 
 </resources>

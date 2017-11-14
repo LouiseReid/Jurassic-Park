@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context="com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivity">
 
     <TextView
@@ -39,7 +40,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="11dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/holo_red_light"
         app:layout_constraintBottom_toBottomOf="@+id/topBar"
@@ -48,13 +49,14 @@
 
     <TextView
         android:id="@+id/feedNowLabel"
-        android:layout_width="69dp"
-        android:layout_height="27dp"
+        android:layout_width="95dp"
+        android:layout_height="38dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:text="@string/feed_now"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         app:layout_constraintLeft_toRightOf="@+id/feedNowKey"
         app:layout_constraintTop_toTopOf="@+id/topBar" />
 
@@ -62,7 +64,7 @@
         android:id="@+id/hungryKey"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="19dp"
         android:layout_marginTop="10dp"
         android:background="@android:color/holo_orange_dark"
         app:layout_constraintLeft_toRightOf="@+id/feedNowLabel"
@@ -70,12 +72,13 @@
 
     <TextView
         android:id="@+id/hungryLabel"
-        android:layout_width="69dp"
-        android:layout_height="27dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:text="@string/hungry"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         app:layout_constraintLeft_toRightOf="@+id/hungryKey"
         app:layout_constraintTop_toTopOf="@+id/topBar" />
 
@@ -83,7 +86,7 @@
         android:id="@+id/okKey"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="18dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/holo_green_dark"
         app:layout_constraintLeft_toRightOf="@+id/hungryLabel"
@@ -91,13 +94,14 @@
 
     <TextView
         android:id="@+id/okLabel"
-        android:layout_width="69dp"
-        android:layout_height="27dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
         android:text="FINE"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         app:layout_constraintLeft_toRightOf="@+id/okKey"
         app:layout_constraintTop_toTopOf="parent" />
 
