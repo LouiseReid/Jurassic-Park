@@ -2,6 +2,8 @@ package com.example.louisereid.jurassicpark.BackEnd.Food;
 
 import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType;
 
+import static com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType.CARNIVORE;
+
 /**
  * Created by louisereid on 10/11/2017.
  */
@@ -20,6 +22,8 @@ public class Plants extends Food {
     public DinoType getSuitableFor() {
         return suitableFor;
     }
+
+
 
     @Override
     public int getNutritionalValue() {

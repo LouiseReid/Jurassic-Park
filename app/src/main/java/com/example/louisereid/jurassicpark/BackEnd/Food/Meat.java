@@ -19,6 +19,7 @@ public class Meat extends Food {
         return suitableFor;
     }
 
+    
     @Override
     public int getNutritionalValue() {
         return 500;

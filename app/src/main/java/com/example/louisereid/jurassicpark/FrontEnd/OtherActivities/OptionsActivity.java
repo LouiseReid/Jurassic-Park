@@ -1,6 +1,7 @@
 package com.example.louisereid.jurassicpark.FrontEnd.OtherActivities;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageButton;
@@ -37,6 +38,8 @@ public class OptionsActivity extends MyMenu {
 
     public void onTRexButtonClick(View button){
         Intent i = new Intent(this, AllTRexActivity.class);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.rex);
+        mp.start();
         startActivity(i);
     }
 

@@ -1,6 +1,7 @@
 package com.example.louisereid.jurassicpark.FrontEnd.OtherActivities;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -34,20 +35,22 @@ public class MyMenu extends AppCompatActivity {
             return true;
         }
         if(item.getItemId() == R.id.trex){
-            Intent raptors = new Intent(this, AllTRexActivity.class);
-            startActivity(raptors);
+            Intent trex = new Intent(this, AllTRexActivity.class);
+            final MediaPlayer mp = MediaPlayer.create(this, R.raw.rex);
+            mp.start();
+            startActivity(trex);
             return true;
         }        if(item.getItemId() == R.id.aviary){
-            Intent raptors = new Intent(this, AllAviaryActivity.class);
-            startActivity(raptors);
+            Intent aviary = new Intent(this, AllAviaryActivity.class);
+            startActivity(aviary);
             return true;
         }        if(item.getItemId() == R.id.triceratops){
-            Intent raptors = new Intent(this, AllTriceratopsActivity.class);
-            startActivity(raptors);
+            Intent tric = new Intent(this, AllTriceratopsActivity.class);
+            startActivity(tric);
             return true;
         }       if(item.getItemId() == R.id.all){
-            Intent raptors = new Intent(this, AllDinosActivity.class);
-            startActivity(raptors);
+            Intent all = new Intent(this, AllDinosActivity.class);
+            startActivity(all);
             return true;
         }
 

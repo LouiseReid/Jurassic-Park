@@ -36,13 +36,13 @@ public class DinoAdapter extends ArrayAdapter<Dino> {
         TextView type = (TextView)listItemView.findViewById(R.id.itemType);
         type.setText(currentDino.getType());
 
-        if(getItem(position).getStomachSize() < 5){
+        if(getItem(position).getStomachSize() < 2){
             listItemView.setBackgroundColor(Color.rgb(221, 59, 59));
         }
-        if(getItem(position).getStomachSize() >= 5 && getItem(position).getStomachSize() < 8){
+        if(getItem(position).getStomachSize() >= 2 && getItem(position).getStomachSize() < 5){
             listItemView.setBackgroundColor(Color.rgb(255,165,0));
         }
-        if(getItem(position).getStomachSize() >= 8){
+        if(getItem(position).getStomachSize() >= 5){
             listItemView.setBackgroundColor(Color.rgb(50,205,50));
         }
 

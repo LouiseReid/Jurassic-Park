@@ -1,6 +1,7 @@
 package com.example.louisereid.jurassicpark.FrontEnd.OtherActivities;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,9 +37,7 @@ public class DinoActivity extends MyMenu {
     private Button moveToTRex;
 
 
-
     Paddock paddock;
-    Pen pen;
 
 
     @Override
@@ -143,6 +142,7 @@ public class DinoActivity extends MyMenu {
     public void onButtonClickTRex(View Button){
         DBHelper dbHelper = new DBHelper(this);
         dino.moveToTRex(dbHelper);
+
     }
 
 

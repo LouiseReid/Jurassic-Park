@@ -23,7 +23,6 @@ public class Dinosaur {
     private int weight;
     private PaddockName location;
     private ArrayList<Edible> stomach;
-    private int stomachSize;
 
     public Dinosaur(DinoType type, String name, int age, int weight, PaddockName location) {
         this.type = type;
