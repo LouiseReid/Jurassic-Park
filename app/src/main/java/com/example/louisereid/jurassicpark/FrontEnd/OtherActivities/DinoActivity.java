@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,6 +15,8 @@ import com.example.louisereid.jurassicpark.BackEnd.Dinosaurs.DinoType;
 import com.example.louisereid.jurassicpark.BackEnd.Paddocks.Paddock;
 import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
 import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockState;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllRaptorsActivity;
+import com.example.louisereid.jurassicpark.FrontEnd.AllDinosActivities.AllTRexActivity;
 import com.example.louisereid.jurassicpark.FrontEnd.Classes.Dino;
 import com.example.louisereid.jurassicpark.FrontEnd.Classes.Pen;
 import com.example.louisereid.jurassicpark.FrontEnd.DBHelper;
@@ -129,6 +134,16 @@ public class DinoActivity extends MyMenu {
 
             blackBG.setVisibility(View.VISIBLE);
 
+            RotateAnimation rotateAnimation = new RotateAnimation(0, 360f,
+                    Animation.RELATIVE_TO_SELF, 0.5f,
+                    Animation.RELATIVE_TO_SELF, 0.5f);
+
+            rotateAnimation.setInterpolator(new LinearInterpolator());
+            rotateAnimation.setDuration(800);
+            rotateAnimation.setRepeatCount(Animation.INFINITE);
+
+            findViewById(R.id.paddockStateView).startAnimation(rotateAnimation);
+
             Dino.deleteAll(dbHelper);
         }
     }
@@ -137,11 +152,15 @@ public class DinoActivity extends MyMenu {
     public void onButtonClickRaptors(View Button){
         DBHelper dbHelper = new DBHelper(this);
         dino.moveToRaptors(dbHelper);
+        Intent i = new Intent(this, AllRaptorsActivity.class);
+        startActivity(i);
     }
 
     public void onButtonClickTRex(View Button){
         DBHelper dbHelper = new DBHelper(this);
         dino.moveToTRex(dbHelper);
+        Intent i = new Intent(this, AllTRexActivity.class);
+        startActivity(i);
 
     }
 

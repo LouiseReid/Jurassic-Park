@@ -6,7 +6,7 @@ import com.example.louisereid.jurassicpark.BackEnd.Paddocks.PaddockName;
  * Created by louisereid on 12/11/2017.
  */
 
-public class Human {
+abstract public class Human {
 
     private String name;
     private PaddockName location;

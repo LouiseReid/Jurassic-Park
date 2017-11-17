@@ -94,7 +94,6 @@ public class Paddock {
         if(paddockSize() >= capacity){
         }
         return "Paddocks full";
-
     }
 
     public int paddockSize(){
